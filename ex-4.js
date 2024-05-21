@@ -374,4 +374,28 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = bills.filter((object) => {
+  return object.member !== null;
+});
+
+const nameOfMember = totalMembers.map((nameInObject) => {
+  return nameInObject.member.name;
+});
+console.log(nameOfMember);
+
+const duplicateMember = nameOfMember.filter((acc, index) => {
+  console.log(acc);
+  console.log(index);
+  return nameOfMember.indexOf(acc) === index;
+});
+const countDuplicateNumber = `Unique Members Count: ${duplicateMember.length}`;
+
+//  const duplicateMember2 = nameOfMember.reduce((acc, curr) => {
+//   console.log(acc)
+//   console.log(curr)
+//   if(!acc.includes(curr)){
+//      acc.push(curr)
+//  }
+//  return acc
+//   },[])
+console.log(countDuplicateNumber);
