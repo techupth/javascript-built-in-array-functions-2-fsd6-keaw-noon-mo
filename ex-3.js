@@ -373,5 +373,14 @@ const bills = [
   },
 ];
 
-// Start coding here
-const billMembers;
+function search (order){
+ return order.member !== null ;
+}
+const billMembers = bills.filter(search)
+console.log(billMembers);
+
+function lastBill (totalName){
+  return totalName.member.name
+}
+const newBill = billMembers.map(lastBill)
+console.log(newBill);

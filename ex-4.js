@@ -373,5 +373,21 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+function search (order){
+  return order.member !== null ;
+ }
+ const billMembers = bills.filter(search)
+
+ function lastBill (totalName){
+   return totalName.member.name
+ }
+ const newBill = billMembers.map(lastBill)
+ console.log(newBill);
+
+let totalMembers =newBill.filter((item,index)=>{
+    console.log(item)
+    return newBill.indexOf(item)===index
+  }
+,)
+
+console.log("Unique Members Count: " +totalMembers.length)
