@@ -373,6 +373,11 @@ const bills = [
   },
 ];
 
-// Start coding here
+function search (bill){
+  return bill.member   
+}
+const newBills = bills.filter(search)
 
-const newBills;
+console.log(newBills)
+
+
